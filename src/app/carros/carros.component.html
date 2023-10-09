@@ -1,0 +1,24 @@
+<div class="contenedor container-fluid row">
+  <div
+    class="card m-2"
+    style="width: 17rem"
+    *ngFor="let vehiculo of vehiculosFiltrados"
+  >
+    <img
+      src="https://d3bmp4azzreq60.cloudfront.net/fit-in/2000x2000/vendetunave/images/vehiculos/{{
+        vehiculo.nameImage
+      }}.webp"
+      class="card-img-top"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title">{{ vehiculo?.title }}</h5>
+      <p class="card-text">
+        <br />{{ vehiculo?.precio | currency : "USD" }} COP
+      </p>
+      <p>{{ vehiculo.labelCiudad }}</p>
+      <p>Año: {{ vehiculo.ano }}</p>
+      <a href="#" class="btn btn-primary">Detalle</a>
+    </div>
+  </div>
+</div>
